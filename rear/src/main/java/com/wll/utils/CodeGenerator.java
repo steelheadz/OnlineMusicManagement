@@ -12,7 +12,7 @@ public class CodeGenerator {
         FastAutoGenerator.create("jdbc:mysql://localhost:3306/online_music", "root", "123456")
                 .globalConfig(builder -> {
                     builder.author("wll") // 设置作者
-                            .enableSwagger()
+//                            .enableSwagger()
                             .outputDir("D:/new"); // 输出目录
                 })
                 .packageConfig(builder -> {
@@ -24,7 +24,7 @@ public class CodeGenerator {
                             .xml("resources.mapper"); // 设置 Mapper XML 文件包名
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("likes") // 设置需要生成的表名
+                    builder.addInclude("admin") // 设置需要生成的表名
                             .entityBuilder()
                             .enableLombok() // 启用 Lombok
                             .enableTableFieldAnnotation() // 启用字段注解
